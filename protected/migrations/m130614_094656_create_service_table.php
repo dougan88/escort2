@@ -1,0 +1,1 @@
+<?phpclass m130614_094656_create_service_table extends CDbMigration{	public function up()	{        $this->createTable('service', array(            's_id'           => 'pk',            's_name'         => 'string NOT NULL',        ));	}	public function down()	{        $this->dropTable('service');	}}

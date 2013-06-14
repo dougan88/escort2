@@ -1,25 +1,1 @@
-<?php
-
-class m130613_113019_create_girl_table extends CDbMigration
-{
-	public function up()
-	{
-	}
-
-	public function down()
-	{
-		echo "m130613_113019_create_girl_table does not support migration down.\n";
-		return false;
-	}
-
-	/*
-	// Use safeUp/safeDown to do migration with transaction
-	public function safeUp()
-	{
-	}
-
-	public function safeDown()
-	{
-	}
-	*/
-}
+<?phpclass m130613_113019_create_girl_table extends CDbMigration{	public function up()	{        $this->createTable('girl', array(            'g_id'           => 'pk',            'g_name'         => 'string NOT NULL',            'g_age'          => 'integer',            'g_hair'         => 'string',            'g_height'       => 'integer',            'g_weight'       => 'integer',            'g_skype'        => 'string',            'g_cell_phone'   => 'string',            'g_description'  => 'text',            'g_country_code' => 'string',            'g_city'         => 'string',        ));	}	public function down()	{		$this->dropTable('girl');	}}
