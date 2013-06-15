@@ -1,6 +1,6 @@
 <?php
 
-class SiteController extends Controller
+class GirlsController extends Controller
 {
 	/**
 	 * Declares class-based actions.
@@ -8,16 +8,7 @@ class SiteController extends Controller
 	public function actions()
 	{
 		return array(
-//			// captcha action renders the CAPTCHA image displayed on the contact page
-//			'captcha'=>array(
-//				'class'=>'CCaptchaAction',
-//				'backColor'=>0xFFFFFF,
-//			),
-//			// page action renders "static" pages stored under 'protected/views/site/pages'
-//			// They can be accessed via: index.php?r=site/page&view=FileName
-//			'page'=>array(
-//				'class'=>'CViewAction',
-//			),
+			'create' => 'application.controllers.girls.CreateAction',
 		);
 	}
 
@@ -27,7 +18,6 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-        $connection=Yii::app()->db;
 		$this->render('index');
 	}
 
