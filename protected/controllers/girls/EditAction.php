@@ -1,13 +1,13 @@
 <?php
 
-class CreateAction extends CAction
+class EditAction extends CAction
 {
 	/**
 	 * Declares class-based actions.
 	 */
 	public function run()
 	{
-        $girl = new Girl;
+//        $girl = Girl::model()->findByPk();
 
         if(isset($_POST['Girl']))
         {
