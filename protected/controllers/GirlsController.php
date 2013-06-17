@@ -10,6 +10,7 @@ class GirlsController extends Controller
 		return array(
 			'create' => 'application.controllers.girls.CreateAction',
 			'index' => 'application.controllers.girls.IndexAction',
+			'edit' => 'application.controllers.girls.EditAction',
 		);
 	}
 

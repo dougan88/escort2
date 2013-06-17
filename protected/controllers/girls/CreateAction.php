@@ -20,7 +20,7 @@ class CreateAction extends CAction
             }
         }
 
-        $this->controller->render('createGirl', array('girl' => $girl));
+        $this->controller->render('create', array('girl' => $girl));
 	}
 
 }
