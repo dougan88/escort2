@@ -1,15 +1,22 @@
 <?php
 
-class CreateAction extends CAction
+class EditAction extends CAction
 {
 	/**
 	 * Declares class-based actions.
 	 */
 	public function run()
 	{
-        $girl = new Girl;
+        if(isset($_GET['id']))
+        {
+            $girl = Girl::model()->findByPk($_GET['id']);
+        }
 
-        if(isset($_POST['Girl']))
+        if(!$girl)
+        {
+            Yii::app()->user->setFlash('cantFind','Cant find specified girl.');
+            $this->controller->refresh();
+        }elseif(isset($_POST['Girl']))
         {
             $girl->attributes = $_POST['Girl'];
             if($girl->validate())

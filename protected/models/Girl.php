@@ -1,7 +1,12 @@
 <?php
 
-class Girl extends CActionRecord
+class Girl extends CActiveRecord
 {
+
+    public static function model($className = __CLASS__)
+    {
+        return parent::model($className);
+    }
 
     /**
      * Declares the validation rules.
@@ -9,12 +14,9 @@ class Girl extends CActionRecord
     public function rules()
     {
         return array(
-//            // name, email, subject and body are required
-//            array('name, email, subject, body', 'required'),
-//            // email has to be a valid email address
-//            array('email', 'email'),
 //            // verifyCode needs to be entered correctly
 //            array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
+               array('g_name, g_age, g_hair, g_height, g_weight, g_skype, g_description', 'required'),
         );
     }
 
@@ -37,5 +39,10 @@ class Girl extends CActionRecord
             'g_country_code' => 'Your country:',
             'g_city'         => 'Your city:',
         );
+    }
+
+    public function tableName()
+    {
+        return 'girl';
     }
 }

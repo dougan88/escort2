@@ -9,16 +9,8 @@ class GirlsController extends Controller
 	{
 		return array(
 			'create' => 'application.controllers.girls.CreateAction',
+			'index' => 'application.controllers.girls.IndexAction',
 		);
-	}
-
-	/**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
-	 */
-	public function actionIndex()
-	{
-		$this->render('index');
 	}
 
 //	/**
