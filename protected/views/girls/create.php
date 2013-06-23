@@ -85,13 +85,13 @@ $this->breadcrumbs=array(
 
     <div class="row">
         <?php echo $form->labelEx($girl,'g_country_code'); ?>
-        <?php echo $form->dropDownList($girl,'g_country_code', Yii::app()->params['countries']); ?>
+        <?php echo $form->dropDownList($girl,'g_country_code', Yii::app()->params['countries'], array('empty' => 'Select your country')); ?>
         <?php echo $form->error($girl,'g_country_code'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($girl,'g_city'); ?>
-        <?php echo $form->dropDownList($girl,'g_city', Yii::app()->params['countries']); ?>
+        <?php echo $form->dropDownList($girl,'g_city', Yii::app()->params['cities'], array('empty' => 'Select your city')); ?>
         <?php echo $form->error($girl,'g_city'); ?>
     </div>
 
