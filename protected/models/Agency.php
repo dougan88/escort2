@@ -1,6 +1,6 @@
 <?php
 
-class Girl extends CActiveRecord
+class Agency extends CActiveRecord
 {
 
     public static function model($className = __CLASS__)
