@@ -16,7 +16,9 @@ class Girl extends CActiveRecord
         return array(
 //            // verifyCode needs to be entered correctly
 //            array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
-               array('g_name, g_age, g_hair, g_height, g_weight, g_skype, g_description', 'required'),
+                array('g_name, g_age, g_hair, g_height, g_weight, g_skype, g_description', 'required'),
+                array('g_country_code', 'in', 'range' => array_keys(Yii::app()->params['countries'])),
+                array('g_city', 'in', 'range' => array_keys(Yii::app()->params['cities'])),
         );
     }
 

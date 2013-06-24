@@ -3,13 +3,13 @@
 /* @var $model ContactForm */
 /* @var $form CActiveForm */
 
-$this->pageTitle=Yii::app()->name . ' - Edit list';
+$this->pageTitle=Yii::app()->name . ' - Girls list';
 $this->breadcrumbs=array(
-    'Girls', 'Edit list',
+    'Girls',
 );
 ?>
 
-    <h1>Edit list</h1>
+    <h1>Girls list</h1>
 
 <?php if(Yii::app()->user->hasFlash('noGirls')): ?>
 
@@ -30,7 +30,7 @@ $this->breadcrumbs=array(
 
     $this->widget('zii.widgets.CListView', array(
         'dataProvider'=>$dataProvider,
-        'itemView'=>'_girl',   // refers to the partial view named '_post'
+        'itemView'=>'_showDetailedGirl',
         'sortableAttributes'=>array(
             'g_name',
             'g_age',
