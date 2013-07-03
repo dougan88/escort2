@@ -30,8 +30,8 @@ class Girl extends CActiveRecord
     public function attributeLabels()
     {
         return array(
-            'g_name'         => 'Tell me your name sweety:',
-            'g_age'          => 'Your age:',
+            'g_name'         => 'Name:',
+            'g_age'          => 'Age:',
             'g_hair'         => 'Hair color:',
             'g_height'       => 'Height:',
             'g_weight'       => 'Weight:',
