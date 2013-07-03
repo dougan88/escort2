@@ -8,11 +8,11 @@ class AgencyController extends Controller
 	public function actions()
 	{
 		return array(
-//			'create' => 'application.controllers.girls.CreateAction',
-			'edit-list' => 'application.controllers.girls.EditListAction',
-//			'edit' => 'application.controllers.girls.EditAction',
-//			'list' => 'application.controllers.girls.ListAction',
-//			'show' => 'application.controllers.girls.ShowAction',
+			'create' => 'application.controllers.agency.CreateAction',
+			'edit-list' => 'application.controllers.agency.EditListAction',
+			'edit' => 'application.controllers.agency.EditAction',
+			'list' => 'application.controllers.agency.ListAction',
+			'show' => 'application.controllers.agency.ShowAction',
 		);
 	}
 

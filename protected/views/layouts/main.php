@@ -32,9 +32,15 @@
 				array('label'=>'Home', 'url'=>array('/site/index')),
 //				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Girls', 'url'=>array('/girls/list'), 'items' =>array(
-                    array('label' => 'Create girl', 'url' => array('/girls/create')),
-                    array('label' => 'Edit girls', 'url' => array('/girls/edit-list')),
+
                 )),
+				array('label' => 'Create girl', 'url' => array('/girls/create')),
+				array('label' => 'Edit girls', 'url' => array('/girls/edit-list')),
+				array('label'=>'Agency', 'url'=>array('/agency/list'), 'items' =>array(
+
+				)),
+				array('label' => 'Create agency', 'url' => array('/agency/create')),
+				array('label' => 'Edit agency', 'url' => array('/agency/edit-list')),
 //				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 //				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
