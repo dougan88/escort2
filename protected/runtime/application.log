@@ -3815,3 +3815,11 @@ Stack trace:
 #13 {main}
 ---
 2013/07/08 11:18:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esc.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2013/07/08 11:35:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
