@@ -37,9 +37,9 @@ class Girl extends CActiveRecord
             'g_weight'       => 'Weight:',
             'g_skype'        => 'Skype:',
             'g_cell_phone'   => 'Cell Phone:',
-            'g_description'  => 'Tell me something about yourself:',
-            'g_country_code' => 'Your country:',
-            'g_city'         => 'Your city:',
+            'g_description'  => 'Description:',
+            'g_country_code' => 'Country:',
+            'g_city'         => 'City:',
         );
     }
 
