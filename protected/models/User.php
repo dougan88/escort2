@@ -16,7 +16,7 @@ class User extends CActiveRecord
                 array('u_username, u_password, u_email', 'required'),
                 array('u_email', 'email'),
                 array('u_username', 'length', 'min' => 2, 'max' => 50),
-                array('u_username', 'length', 'min' => 6, 'max' => 50),
+                array('u_password', 'length', 'min' => 6, 'max' => 50),
         );
     }
 

@@ -3823,3 +3823,557 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2013/07/08 12:05:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:05:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/create".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/user/create
+HTTP_REFERER=http://escort/site/index
+---
+2013/07/08 12:05:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:06:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/create".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/user/create
+HTTP_REFERER=http://escort/site/index
+---
+2013/07/08 12:06:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:09:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/create".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/user/create
+HTTP_REFERER=http://escort/site/index
+---
+2013/07/08 12:09:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:09:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:10:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:16:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:16:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:16:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:16:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:17:54 [error] [php] Undefined variable: agency (/mnt/shared/escort/www/protected/views/user/show.php:18)
+Stack trace:
+#0 /mnt/shared/framework/web/CController.php(869): UserController->renderFile()
+#1 /mnt/shared/framework/web/CController.php(782): UserController->renderPartial()
+#2 /mnt/shared/escort/www/protected/controllers/user/ShowAction.php(22): UserController->render()
+#3 /mnt/shared/framework/web/actions/CAction.php(76): ShowAction->run()
+#4 /mnt/shared/framework/web/CController.php(308): ShowAction->runWithParams()
+#5 /mnt/shared/framework/web/CController.php(286): UserController->runAction()
+#6 /mnt/shared/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /mnt/shared/framework/web/CWebApplication.php(282): UserController->run()
+#8 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /mnt/shared/escort/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/user/show/id/1
+in /mnt/shared/escort/www/protected/views/user/show.php (18)
+in /mnt/shared/escort/www/protected/controllers/user/ShowAction.php (22)
+in /mnt/shared/escort/www/index.php (13)
+2013/07/08 12:17:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:18:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:19:32 [error] [php] Undefined variable: agency (/mnt/shared/escort/www/protected/views/user/show.php:18)
+Stack trace:
+#0 /mnt/shared/framework/web/CController.php(869): UserController->renderFile()
+#1 /mnt/shared/framework/web/CController.php(782): UserController->renderPartial()
+#2 /mnt/shared/escort/www/protected/controllers/user/ShowAction.php(22): UserController->render()
+#3 /mnt/shared/framework/web/actions/CAction.php(76): ShowAction->run()
+#4 /mnt/shared/framework/web/CController.php(308): ShowAction->runWithParams()
+#5 /mnt/shared/framework/web/CController.php(286): UserController->runAction()
+#6 /mnt/shared/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /mnt/shared/framework/web/CWebApplication.php(282): UserController->run()
+#8 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /mnt/shared/escort/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/user/show/id/1
+in /mnt/shared/escort/www/protected/views/user/show.php (18)
+in /mnt/shared/escort/www/protected/controllers/user/ShowAction.php (22)
+in /mnt/shared/escort/www/index.php (13)
+2013/07/08 12:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:19:35 [error] [php] Undefined variable: agency (/mnt/shared/escort/www/protected/views/user/show.php:18)
+Stack trace:
+#0 /mnt/shared/framework/web/CController.php(869): UserController->renderFile()
+#1 /mnt/shared/framework/web/CController.php(782): UserController->renderPartial()
+#2 /mnt/shared/escort/www/protected/controllers/user/ShowAction.php(22): UserController->render()
+#3 /mnt/shared/framework/web/actions/CAction.php(76): ShowAction->run()
+#4 /mnt/shared/framework/web/CController.php(308): ShowAction->runWithParams()
+#5 /mnt/shared/framework/web/CController.php(286): UserController->runAction()
+#6 /mnt/shared/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /mnt/shared/framework/web/CWebApplication.php(282): UserController->run()
+#8 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /mnt/shared/escort/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/user/show/id/1
+in /mnt/shared/escort/www/protected/views/user/show.php (18)
+in /mnt/shared/escort/www/protected/controllers/user/ShowAction.php (22)
+in /mnt/shared/escort/www/index.php (13)
+2013/07/08 12:19:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:19:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:19:38 [error] [php] Undefined variable: agency (/mnt/shared/escort/www/protected/views/user/show.php:18)
+Stack trace:
+#0 /mnt/shared/framework/web/CController.php(869): UserController->renderFile()
+#1 /mnt/shared/framework/web/CController.php(782): UserController->renderPartial()
+#2 /mnt/shared/escort/www/protected/controllers/user/ShowAction.php(22): UserController->render()
+#3 /mnt/shared/framework/web/actions/CAction.php(76): ShowAction->run()
+#4 /mnt/shared/framework/web/CController.php(308): ShowAction->runWithParams()
+#5 /mnt/shared/framework/web/CController.php(286): UserController->runAction()
+#6 /mnt/shared/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /mnt/shared/framework/web/CWebApplication.php(282): UserController->run()
+#8 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /mnt/shared/escort/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/user/show/id/1
+in /mnt/shared/escort/www/protected/views/user/show.php (18)
+in /mnt/shared/escort/www/protected/controllers/user/ShowAction.php (22)
+in /mnt/shared/escort/www/index.php (13)
+2013/07/08 12:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:20:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:24:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:24:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:24:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:24:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:24:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:24:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:25:10 [warning] [application] Failed to set unsafe attribute "g_cell_phone" of "Girl".
+in /mnt/shared/escort/www/protected/controllers/girls/CreateAction.php (14)
+in /mnt/shared/escort/www/index.php (13)
+2013/07/08 12:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:25:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:25:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:25:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:25:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:26:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:26:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:26:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:26:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:26:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:26:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:29:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:30:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:30:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:30:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:30:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:30:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:30:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:30:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:31:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:31:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:31:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:31:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:31:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:31:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:31:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:31:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:31:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/08 12:31:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

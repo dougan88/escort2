@@ -41,6 +41,9 @@
 				)),
 				array('label' => 'Create agency', 'url' => array('/agency/create')),
 				array('label' => 'Edit agency', 'url' => array('/agency/edit-list')),
+				array('label' => 'Create user', 'url' => array('/user/create')),
+				array('label' => 'Users list', 'url' => array('/user/list')),
+				array('label' => 'Edit users', 'url' => array('/user/edit-list')),
 //				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 //				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

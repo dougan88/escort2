@@ -15,7 +15,7 @@ class CreateAction extends CAction
             if($agency->validate())
             {
 				$agency->save();
-                Yii::app()->user->setFlash('aCreated','Agency is created successfully.');
+                Yii::app()->user->setFlash('aCreated','Agency created successfully.');
 				$this->controller->refresh();
             }
         }
