@@ -13,6 +13,7 @@ class AgencyController extends Controller
 			'edit' => 'application.controllers.agency.EditAction',
 			'list' => 'application.controllers.agency.ListAction',
 			'show' => 'application.controllers.agency.ShowAction',
+			'delete' => 'application.controllers.agency.DeleteAgencyAction',
 		);
 	}
 

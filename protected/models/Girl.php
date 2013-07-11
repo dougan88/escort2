@@ -8,25 +8,15 @@ class Girl extends CActiveRecord
         return parent::model($className);
     }
 
-    /**
-     * Declares the validation rules.
-     */
     public function rules()
     {
         return array(
-//            // verifyCode needs to be entered correctly
-//            array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
                 array('g_name, g_age, g_hair, g_height, g_weight, g_skype, g_description', 'required'),
                 array('g_country_code', 'in', 'range' => array_keys(Yii::app()->params['countries'])),
                 array('g_city', 'in', 'range' => array_keys(Yii::app()->params['cities'])),
         );
     }
 
-    /**
-     * Declares customized attribute labels.
-     * If not declared here, an attribute would have a label that is
-     * the same as its name with the first letter in upper case.
-     */
     public function attributeLabels()
     {
         return array(
