@@ -27,25 +27,21 @@
 	</div><!-- header -->
 
 	<div id="mainmenu">
+		<?php $user = Yii::app()->user; ?>
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-//				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Girls', 'url'=>array('/girls/list'), 'items' =>array(
-
-                )),
-				array('label' => 'Create girl', 'url' => array('/girls/create')),
-				array('label' => 'Edit girls', 'url' => array('/girls/edit-list')),
-				array('label'=>'Agency', 'url'=>array('/agency/list'), 'items' =>array(
-
-				)),
-				array('label' => 'Create agency', 'url' => array('/agency/create')),
-				array('label' => 'Edit agency', 'url' => array('/agency/edit-list')),
-				array('label' => 'Create user', 'url' => array('/user/create')),
-				array('label' => 'Users list', 'url' => array('/user/list')),
-				array('label' => 'Edit users', 'url' => array('/user/edit-list')),
-//				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-//				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Girls', 'url'=>array('/girls/list'),),
+				array('label' => 'Create girl', 'url' => array('/girls/create'), 'visible' => ($user->checkAccess('customer') || $user->checkAccess('manager'))),
+				array('label' => 'Edit girls', 'url' => array('/girls/edit-list'), 'visible' => ($user->checkAccess('customer') || $user->checkAccess('manager'))),
+				array('label'=>'Agency', 'url'=>array('/agency/list'),),
+				array('label' => 'Create agency', 'url' => array('/agency/create'), 'visible' => ($user->checkAccess('customer') || $user->checkAccess('manager'))),
+				array('label' => 'Edit agency', 'url' => array('/agency/edit-list'), 'visible' => ($user->checkAccess('customer') || $user->checkAccess('manager'))),
+				array('label' => 'Create user', 'url' => array('/user/create'), 'visible' => $user->checkAccess('manager')),
+				array('label' => 'Users list', 'url' => array('/user/list'), 'visible' => $user->checkAccess('manager')),
+				array('label' => 'Edit users', 'url' => array('/user/edit-list'), 'visible' => $user->checkAccess('manager')),
+				array('label' => 'Login', 'url'=>array('/site/login'), 'visible' => $user->isGuest),
+				array('label' => 'Logout ('.$user->name.')', 'url'=>array('/site/logout'), 'visible'=>!$user->isGuest),
 			),
 		)); ?>
 	</div><!-- mainmenu -->
