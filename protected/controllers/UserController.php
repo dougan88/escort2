@@ -27,4 +27,29 @@ class UserController extends Controller
 		}
 	}
 
+	public function filters()
+	{
+		return array(
+			'accessControl',
+		);
+	}
+
+	public function accessRules()
+	{
+		return array(
+			array('allow',
+				'actions' => array('edit'),
+				'roles'   => array('customer', 'admin'),
+			),
+			array('allow',
+				'actions' => array('create'),
+				'users'   => array('?'),
+			),
+			array('deny',
+				'actions' => array('create', 'edit-list', 'edit', 'delete'),
+				'users' => array('*'),
+			),
+		);
+	}
+
 }

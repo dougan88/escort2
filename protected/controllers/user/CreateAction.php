@@ -14,6 +14,7 @@ class CreateAction extends CAction
 			$user->attributes = $_POST['User'];
             if($user->validate())
             {
+				$user->u_password = crypt($user->u_password);
 				$user->save();
                 Yii::app()->user->setFlash('uCreated','User created successfully.');
 				$this->controller->refresh();

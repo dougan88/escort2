@@ -41,6 +41,7 @@
 				array('label' => 'Users list', 'url' => array('/user/list'), 'visible' => $user->checkAccess('manager')),
 				array('label' => 'Edit users', 'url' => array('/user/edit-list'), 'visible' => $user->checkAccess('manager')),
 				array('label' => 'Login', 'url'=>array('/site/login'), 'visible' => $user->isGuest),
+				array('label' => 'Register', 'url'=>array('/user/create'), 'visible' => $user->isGuest),
 				array('label' => 'Logout ('.$user->name.')', 'url'=>array('/site/logout'), 'visible'=>!$user->isGuest),
 			),
 		)); ?>
