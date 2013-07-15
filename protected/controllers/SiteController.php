@@ -8,6 +8,7 @@ class SiteController extends Controller
 	public function actions()
 	{
 		return array(
+			'register' => 'application.controllers.site.RegisterAction',
 //			// captcha action renders the CAPTCHA image displayed on the contact page
 //			'captcha'=>array(
 //				'class'=>'CCaptchaAction',
@@ -30,19 +31,16 @@ class SiteController extends Controller
 		$this->render('index');
 	}
 
-//	/**
-//	 * This is the action to handle external exceptions.
-//	 */
-//	public function actionError()
-//	{
-//		if($error=Yii::app()->errorHandler->error)
-//		{
-//			if(Yii::app()->request->isAjaxRequest)
-//				echo $error['message'];
-//			else
-//				$this->render('error', $error);
-//		}
-//	}
+	public function actionError()
+	{
+		if($error=Yii::app()->errorHandler->error)
+		{
+			if(Yii::app()->request->isAjaxRequest)
+				echo $error['message'];
+			else
+				$this->render('error', $error);
+		}
+	}
 
 //	/**
 //	 * Displays the contact page
@@ -94,13 +92,10 @@ class SiteController extends Controller
 		$this->render('login',array('model'=>$model));
 
 	}
-//
-//	/**
-//	 * Logs out the current user and redirect to homepage.
-//	 */
-//	public function actionLogout()
-//	{
-//		Yii::app()->user->logout();
-//		$this->redirect(Yii::app()->homeUrl);
-//	}
+
+	public function actionLogout()
+	{
+		Yii::app()->user->logout();
+		$this->redirect(Yii::app()->homeUrl);
+	}
 }
