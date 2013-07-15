@@ -39,7 +39,7 @@ class UserController extends Controller
 		return array(
 			array('allow',
 				'actions' => array('edit'),
-				'roles'   => array('customer', 'admin'),
+				'roles'   => array('customer', 'manager'),
 			),
 			array('allow',
 				'actions' => array('create'),

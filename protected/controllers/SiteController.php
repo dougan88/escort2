@@ -9,6 +9,10 @@ class SiteController extends Controller
 	{
 		return array(
 			'register' => 'application.controllers.site.RegisterAction',
+			'logout'   => 'application.controllers.site.LogoutAction',
+			'index'    => 'application.controllers.site.IndexAction',
+			'login'    => 'application.controllers.site.LoginAction',
+			'error'    => 'application.controllers.site.ErrorAction',
 //			// captcha action renders the CAPTCHA image displayed on the contact page
 //			'captcha'=>array(
 //				'class'=>'CCaptchaAction',
@@ -22,29 +26,6 @@ class SiteController extends Controller
 		);
 	}
 
-	/**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
-	 */
-	public function actionIndex()
-	{
-		$this->render('index');
-	}
-
-	public function actionError()
-	{
-		if($error=Yii::app()->errorHandler->error)
-		{
-			if(Yii::app()->request->isAjaxRequest)
-				echo $error['message'];
-			else
-				$this->render('error', $error);
-		}
-	}
-
-//	/**
-//	 * Displays the contact page
-//	 */
 //	public function actionContact()
 //	{
 //		$model=new ContactForm;
@@ -68,34 +49,4 @@ class SiteController extends Controller
 //		$this->render('contact',array('model'=>$model));
 //	}
 
-//	/**
-//	 * Displays the login page
-//	 */
-	public function actionLogin()
-	{
-		$model=new LoginForm;
-
-//		// if it is ajax validation request
-//		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-//		{
-//			echo CActiveForm::validate($model);
-//			Yii::app()->end();
-//		}
-//
-
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		$this->render('login',array('model'=>$model));
-
-	}
-
-	public function actionLogout()
-	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
-	}
 }

@@ -13,11 +13,12 @@ class User extends CActiveRecord
         return array(
 //            // verifyCode needs to be entered correctly
 //            array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
-                array('u_username, u_password, u_email', 'required'),
+                array('u_username, u_password, u_email, u_role', 'required'),
                 array('u_email', 'email'),
                 array('u_username', 'length', 'min' => 2, 'max' => 50),
                 array('u_password', 'length', 'min' => 6, 'max' => 50),
 				array('u_username, u_email', 'unique'),
+				array('u_role', 'in', 'range' => array_keys(Yii::app()->params['userTypes'])),
         );
     }
 
@@ -27,6 +28,7 @@ class User extends CActiveRecord
 			'u_username'     => 'Name: ',
 			'u_password'     => 'Password: ',
 			'u_email'        => 'E-mail: ',
+			'u_role'         => 'Registration type: '
         );
     }
 

@@ -28,7 +28,7 @@ class GirlsController extends Controller
 		return array(
 			array('allow',
 				'actions' => array('create', 'edit-list', 'edit', 'delete'),
-				'roles'   => array('customer', 'admin'),
+				'roles'   => array('customer', 'manager'),
 			),
 			array('deny',
 				'actions' => array('create', 'edit-list', 'edit', 'delete'),

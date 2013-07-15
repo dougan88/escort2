@@ -4,11 +4,11 @@ class WebUser extends CWebUser
 
 	public function checkAccess($operation, $params=array())
 	{
-		if (empty($this->_id)) {
+		if (empty($this->id)) {
 			return false;
 		}
 		$role = $this->getState("role");
-		if ($role === 'admin') {
+		if ($role === 'manager') {
 			return true;
 		}
 

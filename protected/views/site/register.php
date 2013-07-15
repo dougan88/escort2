@@ -31,6 +31,14 @@ $this->breadcrumbs=array(
 
 	<?php echo $form->errorSummary($user); ?>
 
+	<p class="note">The field below defines whether you want to locate commercials of your services on our site or just to be a regular customer.</p>
+
+	<div class="row">
+		<?php echo $form->labelEx($user,'u_role'); ?>
+		<?php echo $form->dropDownList($user,'u_role', Yii::app()->params['userTypes'], array('empty' => 'Choose your role on site')); ?>
+		<?php echo $form->error($user,'u_role'); ?>
+	</div>
+
 	<div class="row">
 		<?php echo $form->labelEx($user,'u_username'); ?>
 		<?php echo $form->textField($user,'u_username'); ?>

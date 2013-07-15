@@ -16,7 +16,7 @@ class RegisterAction extends CAction
             {
 				$user->u_password = crypt($user->u_password);
 				$user->save();
-                Yii::app()->user->setFlash('uCreated','You are successfully registered.');
+                Yii::app()->user->setFlash('uCreated','Successfully registered. You may <a href=' . $this->controller->createUrl('site/login') . '>login<a> now.');
 				$this->controller->refresh();
             }
         }
