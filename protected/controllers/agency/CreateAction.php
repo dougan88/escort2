@@ -7,11 +7,13 @@ class CreateAction extends CAction
 	 */
 	public function run()
 	{
+
         $agency = new Agency;
 
         if(isset($_POST['Agency']))
         {
             $agency->attributes = $_POST['Agency'];
+            $agency->a_user = Yii::app()->user->id;
             if($agency->validate())
             {
 				$agency->save();

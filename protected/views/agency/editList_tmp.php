@@ -19,17 +19,27 @@ $this->breadcrumbs=array(
 
 <?php else: ?>
 
-    <?php foreach($agencies as $agency){ ?>
-		<ul>
-			<li>
-				<a href='<?php echo $this->createUrl('agency/edit', array('id'=>$agency->a_id));?>'><?php echo $agency->a_name; ?></a>
-			</li>
+    <?php
 
-			<p>
-				<?php echo $agency->a_description; ?>
-			</p>
-		</ul>
-    <?php } ?>
+    $dataProvider=new CActiveDataProvider('Agency', array(
+        'pagination'=>array(
+            'pageSize'=>10,
+        ),
+    ));
+
+
+    $this->widget('zii.widgets.CListView', array(
+        'dataProvider'=>$dataProvider,
+        'itemView'=>'_agency',
+        'sortableAttributes'=>array(
+            'a_name',
+            'a_description',
+        ),
+    ));
+
+
+
+    ?>
 
 
 <?php endif; ?>

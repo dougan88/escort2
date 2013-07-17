@@ -7,14 +7,14 @@ class EditListAction extends CAction
 	 */
 	public function run()
 	{
-        $agency = Agency::model()->findAll();
-
-        if(!$agency)
+		$user = User::model()->with('agencies')->findByPk(Yii::app()->user->id);
+		$agencies = $user->agencies;
+        if(!$agencies)
         {
             Yii::app()->user->setFlash('noAgencies','No agencies at the moment.');
         }
 
-        $this->controller->render('editList', array('agency' => $agency));
+        $this->controller->render('editList', array('agencies' => $agencies));
 	}
 
 }

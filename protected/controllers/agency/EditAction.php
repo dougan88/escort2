@@ -11,7 +11,15 @@ class EditAction extends CAction
 
         if(isset($_GET['id']))
         {
-			$agency = Agency::model()->findByPk($_GET['id']);
+			$user = User::model()->with('agencies')->findByPk(Yii::app()->user->id);
+			$agencies = $user->agencies;
+			foreach($agencies as $agen)
+			{
+				if($agen->a_id === $_GET['id'])
+				{
+					$agency = $agen;
+				}
+			}
         }
 
         if(!$agency)

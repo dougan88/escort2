@@ -36,4 +36,12 @@ class User extends CActiveRecord
     {
         return 'user';
     }
+
+	public function relations()
+	{
+		return array(
+//			'posts' => array('self::HAS_MANY'),
+			'agencies' => array(self::HAS_MANY, 'Agency', 'a_user'),
+		);
+	}
 }
