@@ -12,6 +12,7 @@ class CreateAction extends CAction
         if(isset($_POST['Girl']))
         {
             $girl->attributes = $_POST['Girl'];
+			$girl->g_user = Yii::app()->user->id;
             if($girl->validate())
             {
                 $girl->save();

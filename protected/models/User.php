@@ -40,8 +40,8 @@ class User extends CActiveRecord
 	public function relations()
 	{
 		return array(
-//			'posts' => array('self::HAS_MANY'),
 			'agencies' => array(self::HAS_MANY, 'Agency', 'a_user'),
+			'girls'    => array(self::HAS_MANY, 'Girl', 'g_user'),
 		);
 	}
 }
