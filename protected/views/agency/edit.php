@@ -25,7 +25,7 @@ $this->breadcrumbs=array(
 			),
 		)); ?>
 
-		<p class="note">Fields with <span class="required">*</span> are required.</p>
+		<a href='<?php echo $this->createUrl('agency/delete', array('id'=>$agency->a_id));?>'><?php echo 'Delete ' . $agency->a_name; ?></a>
 
 		<?php echo $form->errorSummary($agency); ?>
 

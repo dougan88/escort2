@@ -11,19 +11,27 @@ class DeleteAgencyAction extends CAction
 
         if(isset($_GET['id']))
         {
-			$agency = Agency::model()->findByPk($_GET['id']);
+			$user = User::model()->with('agencies')->findByPk(Yii::app()->user->id);
+			$agencies = $user->agencies;
+			foreach($agencies as $agen)
+			{
+				if($agen->a_id === $_GET['id'])
+				{
+					$agency = $agen;
+				}
+			}
 
         }
 
         if(!$agency)
         {
-            Yii::app()->user->setFlash('cantFind','Cant find specified agency.');
+            Yii::app()->user->setFlash('cantFind','Can\'t delete specified agency.');
         }elseif($agency->delete())
         {
-        	Yii::app()->user->setFlash('deleted','Agency successfully updated.');
+        	Yii::app()->user->setFlash('deleted',$agency->a_name . ' successfully deleted.');
         }
 
-        $this->controller->render('deleteAgency', array('agency' => $agency));
-	}
+        $this->controller->render('delete', array('agency' => $agency));
+}
 
 }

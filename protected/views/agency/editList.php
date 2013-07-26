@@ -28,6 +28,10 @@ $this->breadcrumbs=array(
 			<p>
 				<?php echo $agency->a_description; ?>
 			</p>
+
+			<li>
+				<a href='<?php echo $this->createUrl('agency/delete', array('id'=>$agency->a_id));?>'><?php echo 'Delete ' . $agency->a_name; ?></a>
+			</li>
 		</ul>
     <?php } ?>
 

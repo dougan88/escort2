@@ -30,6 +30,7 @@ $this->breadcrumbs=array(
 			<p>
 				<?php echo $girl->g_description; ?>
 			</p>
+			<a href='<?php echo $this->createUrl('girls/delete', array('id'=>$girl->g_id));?>'><?php echo 'Delete ' . $girl->g_name; ?></a>
 		</ul>
 	<?php } ?>
 

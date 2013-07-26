@@ -13,6 +13,7 @@ class GirlsController extends Controller
 			'edit' => 'application.controllers.girls.EditAction',
 			'list' => 'application.controllers.girls.ListAction',
 			'show' => 'application.controllers.girls.ShowAction',
+			'delete' => 'application.controllers.girls.DeleteGirlAction',
 		);
 	}
 
