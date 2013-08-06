@@ -7,12 +7,7 @@ class EditAction extends CAction
 	 */
 	public function run()
 	{
-		$user = false;
-
-        if(isset($_GET['id']))
-        {
-			$user = User::model()->findByPk($_GET['id']);
-        }
+		$user = User::model()->findByPk(Yii::app()->user->id);
 
         if(!$user)
         {
@@ -22,6 +17,8 @@ class EditAction extends CAction
 			$user->attributes = $_POST['User'];
             if($user->validate())
             {
+
+				$user->u_password = crypt($user->pass1);
 				$user->save();
                 Yii::app()->user->setFlash('updated','Agency successfully updated.');
             }

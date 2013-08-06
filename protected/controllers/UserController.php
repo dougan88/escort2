@@ -9,7 +9,7 @@ class UserController extends Controller
 	{
 		return array(
 			'create' => 'application.controllers.user.CreateAction',
-			'edit-list' => 'application.controllers.user.EditListAction',
+//			'edit-list' => 'application.controllers.user.EditListAction',
 			'edit' => 'application.controllers.user.EditAction',
 			'list' => 'application.controllers.user.ListAction',
 			'show' => 'application.controllers.user.ShowAction',
