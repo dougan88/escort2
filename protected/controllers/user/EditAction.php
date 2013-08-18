@@ -18,8 +18,8 @@ class EditAction extends CAction
             if($user->validate())
             {
 
-				$user->u_password = crypt($user->u_password, 'salt');
-				$user->confirmPassword = crypt($user->confirmPassword, 'salt');
+				$user->u_password = crypt($user->u_password, $user->u_password);
+				$user->confirmPassword = crypt($user->confirmPassword, $user->u_password);
 				$user->save();
                 Yii::app()->user->setFlash('updated','Agency successfully updated.');
             }

@@ -22,7 +22,6 @@ class User extends CActiveRecord
                 array('u_password, confirmPassword', 'length', 'min' => 6, 'max' => 50),
 				array('u_username, u_email', 'unique'),
 				array('u_role', 'in', 'range' => array_keys(Yii::app()->params['userTypes'])),
-				array('confirmPassword', 'confirmPasswordCheck'),
 				array('confirmPassword', 'compare', 'compareAttribute' => 'u_password'),
         );
     }
@@ -51,11 +50,4 @@ class User extends CActiveRecord
 		);
 	}
 
-	public function confirmPasswordCheck($attribute,$params)
-	{
-		echo crypt($this->u_password);
-		echo '|';
-		echo crypt($this->confirmPassword);
-		echo '>|<';
-	}
 }
