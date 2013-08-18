@@ -3,7 +3,7 @@
 class User extends CActiveRecord
 {
 
-	public $_u_password;
+	public $confirmPassword;
 
     public static function model($className = __CLASS__)
     {
@@ -16,24 +16,25 @@ class User extends CActiveRecord
         return array(
 //            // verifyCode needs to be entered correctly
 //            array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
-                array('u_username, u_password, _u_password, u_email, u_role', 'required'),
+                array('u_username, u_password, confirmPassword, u_email, u_role', 'required'),
                 array('u_email', 'email'),
                 array('u_username', 'length', 'min' => 2, 'max' => 50),
-                array('u_password, _u_password', 'length', 'min' => 6, 'max' => 50),
-                array('u_password', 'compare'),
+                array('u_password, confirmPassword', 'length', 'min' => 6, 'max' => 50),
 				array('u_username, u_email', 'unique'),
 				array('u_role', 'in', 'range' => array_keys(Yii::app()->params['userTypes'])),
+				array('confirmPassword', 'confirmPasswordCheck'),
+				array('confirmPassword', 'compare', 'compareAttribute' => 'u_password'),
         );
     }
 
     public function attributeLabels()
     {
         return array(
-			'u_username'  => 'Name: ',
-			'u_password'  => 'Repeat password: ',
-			'_u_password' => 'Password: ',
-			'u_email'     => 'E-mail: ',
-			'u_role'      => 'Registration type: '
+			'u_username'      => 'Name: ',
+			'u_password'      => 'Password: ',
+			'confirmPassword' => 'Repeat password: ',
+			'u_email'         => 'E-mail: ',
+			'u_role'          => 'Registration type: '
         );
     }
 
@@ -48,5 +49,13 @@ class User extends CActiveRecord
 			'agencies' => array(self::HAS_MANY, 'Agency', 'a_user'),
 			'girls'    => array(self::HAS_MANY, 'Girl', 'g_user'),
 		);
+	}
+
+	public function confirmPasswordCheck($attribute,$params)
+	{
+		echo crypt($this->u_password);
+		echo '|';
+		echo crypt($this->confirmPassword);
+		echo '>|<';
 	}
 }

@@ -42,15 +42,16 @@ $this->breadcrumbs=array(
 		</div>
 
 		<div class="row">
-			<?php echo $form->labelEx($user,'_u_password'); ?>
-			<?php echo $form->passwordField($user,'_u_password', array('value' => '')); ?>
-			<?php echo $form->error($user,'_u_password'); ?>
-		</div>
-
-		<div class="row">
 			<?php echo $form->labelEx($user,'u_password'); ?>
 			<?php echo $form->passwordField($user,'u_password', array('value' => '')); ?>
 			<?php echo $form->error($user,'u_password'); ?>
+		</div>
+
+
+		<div class="row">
+			<?php echo $form->labelEx($user,'confirmPassword'); ?>
+			<?php echo $form->passwordField($user,'confirmPassword', array('value' => '')); ?>
+			<?php echo $form->error($user,'confirmPassword'); ?>
 		</div>
 
 

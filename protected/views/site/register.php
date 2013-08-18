@@ -52,6 +52,12 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($user,'confirmPassword'); ?>
+		<?php echo $form->passwordField($user,'confirmPassword'); ?>
+		<?php echo $form->error($user,'confirmPassword'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($user,'u_email'); ?>
 		<?php echo $form->textField($user,'u_email'); ?>
 		<?php echo $form->error($user,'u_email'); ?>
