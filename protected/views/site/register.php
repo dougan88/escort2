@@ -45,6 +45,12 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($user,'u_username'); ?>
 	</div>
 
+    <div class="row">
+        <?php echo $form->labelEx($user,'u_email'); ?>
+        <?php echo $form->textField($user,'u_email'); ?>
+        <?php echo $form->error($user,'u_email'); ?>
+    </div>
+
 	<div class="row">
 		<?php echo $form->labelEx($user,'u_password'); ?>
 		<?php echo $form->passwordField($user,'u_password'); ?>
@@ -55,12 +61,6 @@ $this->breadcrumbs=array(
 		<?php echo $form->labelEx($user,'confirmPassword'); ?>
 		<?php echo $form->passwordField($user,'confirmPassword'); ?>
 		<?php echo $form->error($user,'confirmPassword'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($user,'u_email'); ?>
-		<?php echo $form->textField($user,'u_email'); ?>
-		<?php echo $form->error($user,'u_email'); ?>
 	</div>
 
 	<div class="row buttons">
