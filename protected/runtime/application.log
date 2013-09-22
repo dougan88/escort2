@@ -12487,3 +12487,25 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2013/09/21 19:01:49 [error] [php] Undefined index: User (/mnt/shared/escort2/www/protected/controllers/site/RegisterAction.php:11)
+Stack trace:
+#0 /mnt/shared/framework/web/CController.php(286): SiteController->runAction()
+#1 /mnt/shared/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /mnt/shared/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /mnt/shared/escort2/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/site/register
+in /mnt/shared/escort2/www/protected/controllers/site/RegisterAction.php (11)
+in /mnt/shared/escort2/www/index.php (13)
+2013/09/21 19:02:12 [error] [php] Undefined index: User (/mnt/shared/escort2/www/protected/controllers/site/RegisterAction.php:11)
+Stack trace:
+#0 /mnt/shared/framework/web/CController.php(286): SiteController->runAction()
+#1 /mnt/shared/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /mnt/shared/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /mnt/shared/escort2/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/site/register
+in /mnt/shared/escort2/www/protected/controllers/site/RegisterAction.php (11)
+in /mnt/shared/escort2/www/index.php (13)
