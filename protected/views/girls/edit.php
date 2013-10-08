@@ -79,9 +79,9 @@ $this->breadcrumbs=array(
 		</div>
 
 		<div class="row">
-			<?php echo $form->labelEx($girl,'g_photo'); ?>
-			<?php echo $form->fileField($girl,'g_photo'); ?>
-			<?php echo $form->error($girl,'g_photo'); ?>
+			<?php echo $form->labelEx($girl, 'g_photo'); ?>
+			<?php echo $form->fileField($girl, 'g_photo', array('multiple' => 'multiple')); ?>
+			<?php echo $form->error($girl, 'g_photo'); ?>
 		</div>
 
 		<div class="row">

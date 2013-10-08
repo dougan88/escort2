@@ -29,17 +29,29 @@ class EditAction extends CAction
 		elseif(isset($_POST['Girl']))
         {
             $girl->attributes = $_POST['Girl'];
-			$girl->g_photo = CUploadedFile::getInstance($girl,'g_photo');
+			$girl->g_photo = CUploadedFile::getInstances($girl,'g_photo');
             if($girl->validate())
             {
                 $girl->save();
 
-				$imagePath = Yii::app()->params['imageFolder'] .
-							uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . '_', true) .
-							'.' .
-							$girl->g_photo->getExtensionName();
 
-				$girl->g_photo->saveAs($imagePath);
+				if ($girl->g_photo)
+				{
+					echo '<pre>';
+					print_r($_FILES);
+					echo '</pre>';
+					foreach($girl->g_photo as $key => $file)
+					{
+
+						$imagePath = Yii::app()->params['imageFolder'] .
+									uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . $key . '_', true) .
+									'.' .
+									$file->getExtensionName();
+//									$girl->g_photo->getExtensionName();
+						$file->saveAs($imagePath);
+//						$girl->g_photo->saveAs($imagePath);
+					}
+				}
 
 //                Yii::app()->user->setFlash('updated','Girl successfully updated.');
 //				$this->controller->refresh();
