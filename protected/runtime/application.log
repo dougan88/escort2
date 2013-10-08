@@ -12590,3 +12590,66 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/302
 ---
+2013/10/07 14:34:36 [warning] [application] Failed to set unsafe attribute "g_photo" of "Girl".
+in /mnt/shared/escort/www/protected/controllers/girls/EditAction.php (30)
+in /mnt/shared/escort/www/index.php (13)
+2013/10/08 05:18:18 [error] [php] A non well formed numeric value encountered (/mnt/shared/escort/www/protected/controllers/girls/EditAction.php:38)
+Stack trace:
+#0 /mnt/shared/framework/web/CController.php(308): EditAction->runWithParams()
+#1 /mnt/shared/framework/web/filters/CFilterChain.php(133): GirlsController->runAction()
+#2 /mnt/shared/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /mnt/shared/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /mnt/shared/framework/web/filters/CInlineFilter.php(58): GirlsController->filterAccessControl()
+#5 /mnt/shared/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /mnt/shared/framework/web/CController.php(291): CFilterChain->run()
+#7 /mnt/shared/framework/web/CController.php(265): GirlsController->runActionWithFilters()
+#8 /mnt/shared/framework/web/CWebApplication.php(282): GirlsController->run()
+#9 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /mnt/shared/escort/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/girls/edit/id/4
+2013/10/08 05:21:58 [error] [php] A non well formed numeric value encountered (/mnt/shared/escort/www/protected/controllers/girls/EditAction.php:38)
+Stack trace:
+#0 /mnt/shared/framework/web/CController.php(308): EditAction->runWithParams()
+#1 /mnt/shared/framework/web/filters/CFilterChain.php(133): GirlsController->runAction()
+#2 /mnt/shared/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /mnt/shared/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /mnt/shared/framework/web/filters/CInlineFilter.php(58): GirlsController->filterAccessControl()
+#5 /mnt/shared/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /mnt/shared/framework/web/CController.php(291): CFilterChain->run()
+#7 /mnt/shared/framework/web/CController.php(265): GirlsController->runActionWithFilters()
+#8 /mnt/shared/framework/web/CWebApplication.php(282): GirlsController->run()
+#9 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /mnt/shared/escort/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/girls/edit/id/4
+2013/10/08 05:24:13 [error] [php] A non well formed numeric value encountered (/mnt/shared/escort/www/protected/controllers/girls/EditAction.php:44)
+Stack trace:
+#0 /mnt/shared/framework/web/CController.php(308): EditAction->runWithParams()
+#1 /mnt/shared/framework/web/filters/CFilterChain.php(133): GirlsController->runAction()
+#2 /mnt/shared/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /mnt/shared/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /mnt/shared/framework/web/filters/CInlineFilter.php(58): GirlsController->filterAccessControl()
+#5 /mnt/shared/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /mnt/shared/framework/web/CController.php(291): CFilterChain->run()
+#7 /mnt/shared/framework/web/CController.php(265): GirlsController->runActionWithFilters()
+#8 /mnt/shared/framework/web/CWebApplication.php(282): GirlsController->run()
+#9 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /mnt/shared/escort/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/girls/edit/id/4
+2013/10/08 05:26:44 [error] [php] A non well formed numeric value encountered (/mnt/shared/escort/www/protected/controllers/girls/EditAction.php:38)
+Stack trace:
+#0 /mnt/shared/framework/web/CController.php(308): EditAction->runWithParams()
+#1 /mnt/shared/framework/web/filters/CFilterChain.php(133): GirlsController->runAction()
+#2 /mnt/shared/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /mnt/shared/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /mnt/shared/framework/web/filters/CInlineFilter.php(58): GirlsController->filterAccessControl()
+#5 /mnt/shared/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /mnt/shared/framework/web/CController.php(291): CFilterChain->run()
+#7 /mnt/shared/framework/web/CController.php(265): GirlsController->runActionWithFilters()
+#8 /mnt/shared/framework/web/CWebApplication.php(282): GirlsController->run()
+#9 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /mnt/shared/escort/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/girls/edit/id/4

@@ -25,17 +25,26 @@ class EditAction extends CAction
         if(!$girl)
         {
             Yii::app()->user->setFlash('cantFind','Cant find specified girl.');
-        }elseif(isset($_POST['Girl']))
+        }
+		elseif(isset($_POST['Girl']))
         {
             $girl->attributes = $_POST['Girl'];
+			$girl->g_photo = CUploadedFile::getInstance($girl,'g_photo');
             if($girl->validate())
             {
                 $girl->save();
-                Yii::app()->user->setFlash('updated','Girl successfully updated.');
+
+				$imagePath = Yii::app()->params['imageFolder'] .
+							uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . '_', true) .
+							'.' .
+							$girl->g_photo->getExtensionName();
+
+				$girl->g_photo->saveAs($imagePath);
+
+//                Yii::app()->user->setFlash('updated','Girl successfully updated.');
 //				$this->controller->refresh();
             }
         }
-
         $this->controller->render('edit', array('girl' => $girl));
 	}
 

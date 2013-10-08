@@ -1,6 +1,6 @@
 <?php
 
-class Girl extends CActiveRecord
+class PhotoGirl extends CActiveRecord
 {
 
 	public $g_photo;
@@ -40,6 +40,6 @@ class Girl extends CActiveRecord
 
     public function tableName()
     {
-        return 'girl';
+        return 'photo_g';
     }
 }

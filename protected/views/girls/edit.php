@@ -23,6 +23,7 @@ $this->breadcrumbs=array(
 			'clientOptions'=>array(
 				'validateOnSubmit'=>true,
 			),
+			'htmlOptions' => array('enctype' => 'multipart/form-data'),
 		)); ?>
 
 		<a href='<?php echo $this->createUrl('girls/delete', array('id'=>$girl->g_id));?>'><?php echo 'Delete ' . $girl->g_name; ?></a>
@@ -75,6 +76,12 @@ $this->breadcrumbs=array(
 			<?php echo $form->labelEx($girl,'g_description'); ?>
 			<?php echo $form->textArea($girl,'g_description',array('rows'=>6, 'cols'=>50)); ?>
 			<?php echo $form->error($girl,'g_description'); ?>
+		</div>
+
+		<div class="row">
+			<?php echo $form->labelEx($girl,'g_photo'); ?>
+			<?php echo $form->fileField($girl,'g_photo'); ?>
+			<?php echo $form->error($girl,'g_photo'); ?>
 		</div>
 
 		<div class="row">
