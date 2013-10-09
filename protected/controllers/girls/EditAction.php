@@ -37,9 +37,6 @@ class EditAction extends CAction
 
 				if ($girl->g_photo)
 				{
-					echo '<pre>';
-					print_r($_FILES);
-					echo '</pre>';
 					foreach($girl->g_photo as $key => $file)
 					{
 
@@ -47,14 +44,9 @@ class EditAction extends CAction
 									uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . $key . '_', true) .
 									'.' .
 									$file->getExtensionName();
-//									$girl->g_photo->getExtensionName();
 						$file->saveAs($imagePath);
-//						$girl->g_photo->saveAs($imagePath);
 					}
 				}
-
-//                Yii::app()->user->setFlash('updated','Girl successfully updated.');
-//				$this->controller->refresh();
             }
         }
         $this->controller->render('edit', array('girl' => $girl));
