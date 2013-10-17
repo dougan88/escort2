@@ -39,12 +39,25 @@ class EditAction extends CAction
 				{
 					foreach($girl->g_photo as $key => $file)
 					{
-
+						//Generates the file name
 						$imagePath = Yii::app()->params['imageFolder'] .
 									uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . $key . '_', true) .
 									'.' .
 									$file->getExtensionName();
-						$file->saveAs($imagePath);
+
+						$photo = new PhotoGirl();
+						$photo->pg_girl = $girl->g_id;
+						$photo->pg_link = $imagePath;
+
+						if ($photo->validate())
+						{
+							$photo->save();
+//							$file->saveAs($imagePath);
+						}
+						elseif($photo->hasErrors())
+						{
+							$girl->addError('g_photo', $photo->getError('pg_girl'));
+						}
 					}
 				}
             }
