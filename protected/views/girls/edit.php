@@ -18,10 +18,11 @@ $this->breadcrumbs=array(
 	<div class="form">
 
 		<?php $form=$this->beginWidget('CActiveForm', array(
-			'id'=>'contact-form',
-			'enableClientValidation'=>true,
-			'clientOptions'=>array(
-				'validateOnSubmit'=>true,
+			'action'                 => $this->createUrl(Yii::app()->request->getUrl(), array('sent' => 1)),
+			'id'                     => 'contact-form',
+			'enableClientValidation' => true,
+			'clientOptions'          => array(
+				'validateOnSubmit' => true,
 			),
 			'htmlOptions' => array('enctype' => 'multipart/form-data'),
 		)); ?>

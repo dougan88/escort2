@@ -49,6 +49,10 @@ class EditAction extends CAction
 				}
             }
         }
+		elseif (isset($_GET['sent']))
+		{
+			Yii::app()->user->setFlash('cantFind','Something went wrong. Probably the images that you downloaded was too big. Please, try again.');
+		}
         $this->controller->render('edit', array('girl' => $girl));
 	}
 
