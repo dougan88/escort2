@@ -52,7 +52,7 @@ class EditAction extends CAction
 						if ($photo->validate())
 						{
 							$photo->save();
-//							$file->saveAs($imagePath);
+							$file->saveAs($imagePath);
 						}
 						elseif($photo->hasErrors())
 						{

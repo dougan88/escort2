@@ -13187,3 +13187,19 @@ Stack trace:
 #10 C:\sites\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #11 C:\sites\escort\www\index.php(13): CWebApplication->run()
 REQUEST_URI=/girls/edit/id/1/sent/1
+2013/10/17 20:21:15 [error] [php] Array to string conversion (C:\sites\escort2\www\protected\models\PhotoGirl.php:21)
+Stack trace:
+#0 C:\sites\framework\web\actions\CAction.php(76): EditAction->run()
+#1 C:\sites\framework\web\CController.php(308): EditAction->runWithParams()
+#2 C:\sites\framework\web\filters\CFilterChain.php(133): GirlsController->runAction()
+#3 C:\sites\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\sites\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\sites\framework\web\filters\CInlineFilter.php(58): GirlsController->filterAccessControl()
+#6 C:\sites\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\sites\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\sites\framework\web\CController.php(265): GirlsController->runActionWithFilters()
+#9 C:\sites\framework\web\CWebApplication.php(282): GirlsController->run()
+#10 C:\sites\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\sites\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\sites\escort2\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/girls/edit/id/1/sent/1/sent/1

@@ -12,7 +12,6 @@ class PhotoGirl extends CActiveRecord
     {
         return array(
                 array('pg_girl, pg_link', 'required'),
-                array('pg_girl', 'in', 'range' => Girl::model()->getAttributes('g_id')),
         );
     }
 
