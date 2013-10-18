@@ -9,8 +9,8 @@ class EditAction extends CAction
 	{
 		$girl = false;
 
-        if(isset($_GET['id']))
-        {
+		if(isset($_GET['id']))
+		{
 			$user = User::model()->with('girls')->findByPk(Yii::app()->user->id);
 			$girls = $user->girls;
 			foreach($girls as $grl)
@@ -20,19 +20,19 @@ class EditAction extends CAction
 					$girl = $grl;
 				}
 			}
-        }
+		}
 
-        if(!$girl)
-        {
-            Yii::app()->user->setFlash('cantFind','Cant find specified girl.');
-        }
+		if(!$girl)
+		{
+			Yii::app()->user->setFlash('cantFind','Cant find specified girl.');
+		}
 		elseif(isset($_POST['Girl']))
-        {
-            $girl->attributes = $_POST['Girl'];
+		{
+			$girl->attributes = $_POST['Girl'];
 			$girl->g_photo = CUploadedFile::getInstances($girl,'g_photo');
-            if($girl->validate())
-            {
-                $girl->save();
+			if($girl->validate())
+			{
+				$girl->save();
 
 
 				if ($girl->g_photo)
@@ -60,13 +60,13 @@ class EditAction extends CAction
 						}
 					}
 				}
-            }
-        }
+			}
+		}
 		elseif (isset($_GET['sent']))
 		{
 			Yii::app()->user->setFlash('cantFind','Something went wrong. Probably the images that you downloaded was too big. Please, try again.');
 		}
-        $this->controller->render('edit', array('girl' => $girl));
+		$this->controller->render('edit', array('girl' => $girl));
 	}
 
 }

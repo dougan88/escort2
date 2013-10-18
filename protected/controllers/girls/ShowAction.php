@@ -9,17 +9,17 @@ class ShowAction extends CAction
 	{
 		$girl = false;
 
-        if(isset($_GET['id']))
-        {
-            $girl = Girl::model()->findByPk($_GET['id']);
-        }
+		if(isset($_GET['id']))
+		{
+			$girl = Girl::model()->findByPk($_GET['id']);
+		}
 
-        if(!$girl)
-        {
-            Yii::app()->user->setFlash('cantFind','Cant find specified girl.');
-        }
+		if(!$girl)
+		{
+			Yii::app()->user->setFlash('cantFind','Cant find specified girl.');
+		}
 
-        $this->controller->render('show', array('girl' => $girl));
+		$this->controller->render('show', array('girl' => $girl));
 	}
 
 }
