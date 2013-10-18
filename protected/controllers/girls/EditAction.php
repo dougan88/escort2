@@ -45,6 +45,12 @@ class EditAction extends CAction
 									'.' .
 									$file->getExtensionName();
 
+						$iconPath = Yii::app()->params['iconsFolder'] .
+							uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . $key . '_icon', true) .
+							'.' .
+							$file->getExtensionName();
+
+
 						$photo = new PhotoGirl();
 						$photo->pg_girl = $girl->g_id;
 						$photo->pg_link = $imagePath;
@@ -53,10 +59,15 @@ class EditAction extends CAction
 						{
 							$photo->save();
 							$file->saveAs($imagePath);
+
+							$icon = new EasyImage($imagePath);
+							$icon->resize(100, 100);
+							$icon->save($iconPath);
 						}
 						elseif($photo->hasErrors())
 						{
 							$girl->addError('g_photo', $photo->getError('pg_girl'));
+							break;
 						}
 					}
 				}

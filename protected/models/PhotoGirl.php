@@ -19,7 +19,7 @@ class PhotoGirl extends CActiveRecord
 	{
 		if ($this->countByAttributes(array('pg_girl' => $this->pg_girl)) >= Yii::app()->params['maxFilesUpload'])
 		{
-			$this->addError('Exceeded allowed file number.');
+			$this->addError('pg_girl', 'Exceeded allowed file number.');
 		}
 	}
 
