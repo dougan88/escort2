@@ -1,6 +1,6 @@
 <?php
 
-class EditAction extends CAction
+class EditAction extends EscAction
 {
 	/**
 	 * Declares class-based actions.
@@ -30,45 +30,15 @@ class EditAction extends CAction
 		{
 			$girl->attributes = $_POST['Girl'];
 			$girl->g_photo = CUploadedFile::getInstances($girl,'g_photo');
-			if($girl->validate())
+			if($girl->save())
 			{
-				$girl->save();
-
-
 				if ($girl->g_photo)
 				{
-					foreach($girl->g_photo as $key => $file)
+					$message = $this->saveImage($girl->g_photo, $girl->g_id);
+
+					if($message !== true)
 					{
-						//Generates the file name
-						$imagePath = Yii::app()->params['imageFolder'] .
-									uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . $key . '_', true) .
-									'.' .
-									$file->getExtensionName();
-
-						$iconPath = Yii::app()->params['iconsFolder'] .
-							uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . $key . '_icon', true) .
-							'.' .
-							$file->getExtensionName();
-
-
-						$photo = new PhotoGirl();
-						$photo->pg_girl = $girl->g_id;
-						$photo->pg_link = $imagePath;
-
-						if ($photo->validate())
-						{
-							$photo->save();
-							$file->saveAs($imagePath);
-
-							$icon = new EasyImage($imagePath);
-							$icon->resize(100, 100);
-							$icon->save($iconPath);
-						}
-						elseif($photo->hasErrors())
-						{
-							$girl->addError('g_photo', $photo->getError('pg_girl'));
-							break;
-						}
+						$girl->addError('g_photo', $message);
 					}
 				}
 			}
