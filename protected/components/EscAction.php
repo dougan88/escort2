@@ -11,17 +11,18 @@ class EscAction extends CAction
 		foreach($images as $key => $file)
 		{
 			//Generates the file name
-			$imagePath = Yii::app()->params['imageFolder'] .
-				uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . $key . '_', true) .
+			$imageName = uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . $key . '_', true) .
 				'.' .
 				$file->getExtensionName();
+			$imagePath = Yii::app()->params['imageFolder'] . $imageName;
 
-			$iconPath = Yii::app()->params['iconsFolder'] .
-				uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . $key . '_icon', true) .
+			$iconName = uniqid(Yii::app()->user->id . rand(Yii::app()->params['randMin'], Yii::app()->params['randMax']) . $key . '_icon', true) .
 				'.' .
 				$file->getExtensionName();
+			$iconPath = Yii::app()->params['iconsFolder'] . $iconName;
 
-			$photo = $this->getImageModel($ownerId, $imagePath, $iconPath, $modelType);
+
+			$photo = $this->getImageModel($ownerId, $imageName, $iconName, $modelType);
 
 			if ($photo->save())
 			{
@@ -39,20 +40,20 @@ class EscAction extends CAction
 		return true;
 	}
 
-	private function getImageModel($ownerId, $imagePath, $iconPath, $modelType)
+	private function getImageModel($ownerId, $imageName, $iconName, $modelType)
 	{
 		switch ($modelType) {
 			case Yii::app()->params['photoG']:
 				$photo = new PhotoGirl();
 				$photo->pg_girl = $ownerId;
-				$photo->pg_link = $imagePath;
-				$photo->pg_icon = $iconPath;
+				$photo->pg_link = $imageName;
+				$photo->pg_icon = $iconName;
 				break;
 			case Yii::app()->params['photoA']:
 				$photo = new PhotoAgency();
 				$photo->pa_agency = $ownerId;
-				$photo->pa_link = $imagePath;
-				$photo->pa_icon = $iconPath;
+				$photo->pa_link = $imageName;
+				$photo->pa_icon = $iconName;
 				break;
 		}
 		return $photo;

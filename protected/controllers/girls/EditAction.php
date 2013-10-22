@@ -34,7 +34,7 @@ class EditAction extends EscAction
 			{
 				if ($girl->g_photo)
 				{
-					$message = $this->saveImage($girl->g_photo, $girl->g_id);
+					$message = $this->saveImage($girl->g_photo, $girl->g_id, Yii::app()->params['photoG']);
 
 					if($message !== true)
 					{
