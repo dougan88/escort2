@@ -24,11 +24,14 @@ $this->breadcrumbs=array(
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'contact-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
+	'action'                 => $this->createUrl(Yii::app()->request->getUrl(), array('sent' => 1)),
+	'id'                     =>'contact-form',
+	'enableClientValidation' =>true,
+
+	'clientOptions'          =>array(
+		'validateOnSubmit' => true,
 	),
+	'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -82,6 +85,12 @@ $this->breadcrumbs=array(
         <?php echo $form->textArea($girl,'g_description',array('rows'=>6, 'cols'=>50)); ?>
         <?php echo $form->error($girl,'g_description'); ?>
     </div>
+
+	<div class="row">
+		<?php echo $form->labelEx($girl, 'g_photo'); ?>
+		<?php echo $form->fileField($girl, 'g_photo', array('multiple' => 'multiple', 'name' => 'Girl[g_photo][]')); ?>
+		<?php echo $form->error($girl, 'g_photo'); ?>
+	</div>
 
     <div class="row">
         <?php echo $form->labelEx($girl,'g_country_code'); ?>
