@@ -6,7 +6,7 @@
 class EscAction extends CAction
 {
 
-	public function saveImage($images, $girlId)
+	public function saveImage($images, $ownerId, $modelType)
 	{
 		foreach($images as $key => $file)
 		{
@@ -21,17 +21,14 @@ class EscAction extends CAction
 				'.' .
 				$file->getExtensionName();
 
-
-			$photo = new PhotoGirl();
-			$photo->pg_girl = $girlId;
-			$photo->pg_link = $imagePath;
+			$photo = $this->getImageModel($ownerId, $imagePath, $iconPath, $modelType);
 
 			if ($photo->save())
 			{
 				$file->saveAs($imagePath);
 
 				$icon = new EasyImage($imagePath);
-				$icon->resize(100, 100);
+				$icon->resize(Yii::app()->params['iconHeight'], Yii::app()->params['iconWidth']);
 				$icon->save($iconPath);
 			}
 			elseif($photo->hasErrors())
@@ -40,6 +37,25 @@ class EscAction extends CAction
 			}
 		}
 		return true;
+	}
+
+	private function getImageModel($ownerId, $imagePath, $iconPath, $modelType)
+	{
+		switch ($modelType) {
+			case Yii::app()->params['photoG']:
+				$photo = new PhotoGirl();
+				$photo->pg_girl = $ownerId;
+				$photo->pg_link = $imagePath;
+				$photo->pg_icon = $iconPath;
+				break;
+			case Yii::app()->params['photoA']:
+				$photo = new PhotoAgency();
+				$photo->pa_agency = $ownerId;
+				$photo->pa_link = $imagePath;
+				$photo->pa_icon = $iconPath;
+				break;
+		}
+		return $photo;
 	}
 
 }

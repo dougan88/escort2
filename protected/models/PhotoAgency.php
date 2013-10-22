@@ -1,6 +1,6 @@
 <?php
 
-class PhotoGirl extends CActiveRecord
+class PhotoAgency extends CActiveRecord
 {
 
     public static function model($className = __CLASS__)
@@ -11,15 +11,15 @@ class PhotoGirl extends CActiveRecord
     public function rules()
     {
         return array(
-                array('pg_girl, pg_link, pg_icon', 'required'),
+                array('pa_agency, pa_link, pa_icon', 'required'),
         );
     }
 
 	public function afterValidate()
 	{
-		if ($this->countByAttributes(array('pg_girl' => $this->pg_girl)) >= Yii::app()->params['maxFilesUpload'])
+		if ($this->countByAttributes(array('pa_agency' => $this->pg_girl)) >= Yii::app()->params['maxFilesUpload'])
 		{
-			$this->addError('pg_girl', 'Exceeded allowed file number.');
+			$this->addError('pa_agency', 'Exceeded allowed file number.');
 		}
 	}
 
