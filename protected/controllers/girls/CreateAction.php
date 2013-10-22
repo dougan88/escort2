@@ -29,6 +29,10 @@ class CreateAction extends EscAction
 				$this->controller->refresh();
 			}
 		}
+		elseif(isset($_GET['sent']))
+		{
+			Yii::app()->user->setFlash('gCreated','Something went wrong. Probably the images that you downloaded was too big. Please, try again.');
+		}
 
 		$this->controller->render('create', array('girl' => $girl));
 	}
