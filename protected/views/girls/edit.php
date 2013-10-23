@@ -21,6 +21,7 @@ $this->breadcrumbs=array(
 			'action'                 => $this->createUrl(Yii::app()->request->getUrl(), array('sent' => 1)),
 			'id'                     => 'contact-form',
 			'enableClientValidation' => true,
+//			'enableAjaxValidation' => true,
 			'clientOptions'          => array(
 				'validateOnSubmit' => true,
 			),
@@ -101,6 +102,12 @@ $this->breadcrumbs=array(
 		<div class="row buttons">
 			<?php echo CHtml::submitButton('Save'); ?>
 		</div>
+
+<!--		<div class="row buttons">-->
+<!--			--><?php //echo CHtml::ajaxSubmitButton('Save', '',
+//			array('type'=>'POST',
+//					'update'=>'#contact-form')); ?>
+<!--		</div>-->
 
 		<?php $this->endWidget(); ?>
 
