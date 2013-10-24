@@ -13436,3 +13436,124 @@ Stack trace:
 REQUEST_URI=/girls/edit/id/8
 HTTP_REFERER=http://escort/girls/edit/id/8
 ---
+2013/10/24 13:18:31 [error] [php] Undefined variable: images (/mnt/shared/escort/www/protected/views/girls/edit.php:80)
+Stack trace:
+#0 /mnt/shared/framework/web/CController.php(869): GirlsController->renderFile()
+#1 /mnt/shared/framework/web/CController.php(782): GirlsController->renderPartial()
+#2 /mnt/shared/escort/www/protected/controllers/girls/EditAction.php(40): GirlsController->render()
+#3 /mnt/shared/framework/web/actions/CAction.php(76): EditAction->run()
+#4 /mnt/shared/framework/web/CController.php(308): EditAction->runWithParams()
+#5 /mnt/shared/framework/web/filters/CFilterChain.php(133): GirlsController->runAction()
+#6 /mnt/shared/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /mnt/shared/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /mnt/shared/framework/web/filters/CInlineFilter.php(58): GirlsController->filterAccessControl()
+#9 /mnt/shared/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /mnt/shared/framework/web/CController.php(291): CFilterChain->run()
+#11 /mnt/shared/framework/web/CController.php(265): GirlsController->runActionWithFilters()
+#12 /mnt/shared/framework/web/CWebApplication.php(282): GirlsController->run()
+#13 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /mnt/shared/escort/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/girls/edit/id/3
+2013/10/24 13:34:28 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/mnt/shared/framework/web/helpers/CHtml.php:98)
+Stack trace:
+#0 /mnt/shared/framework/web/helpers/CHtml.php(153): renderAttributes()
+#1 /mnt/shared/framework/web/helpers/CHtml.php(426): tag()
+#2 /mnt/shared/escort/www/protected/views/girls/edit.php(83): image()
+#3 /mnt/shared/framework/web/CBaseController.php(126): require()
+#4 /mnt/shared/framework/web/CBaseController.php(95): GirlsController->renderInternal()
+#5 /mnt/shared/framework/web/CController.php(869): GirlsController->renderFile()
+#6 /mnt/shared/framework/web/CController.php(782): GirlsController->renderPartial()
+#7 /mnt/shared/escort/www/protected/controllers/girls/EditAction.php(41): GirlsController->render()
+#8 /mnt/shared/framework/web/actions/CAction.php(76): EditAction->run()
+#9 /mnt/shared/framework/web/CController.php(308): EditAction->runWithParams()
+#10 /mnt/shared/framework/web/filters/CFilterChain.php(133): GirlsController->runAction()
+#11 /mnt/shared/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /mnt/shared/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /mnt/shared/framework/web/filters/CInlineFilter.php(58): GirlsController->filterAccessControl()
+#14 /mnt/shared/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /mnt/shared/framework/web/CController.php(291): CFilterChain->run()
+#16 /mnt/shared/framework/web/CController.php(265): GirlsController->runActionWithFilters()
+#17 /mnt/shared/framework/web/CWebApplication.php(282): GirlsController->run()
+#18 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#20 /mnt/shared/escort/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/girls/edit/id/2
+2013/10/24 13:34:51 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/mnt/shared/framework/web/helpers/CHtml.php:98)
+Stack trace:
+#0 /mnt/shared/framework/web/helpers/CHtml.php(153): renderAttributes()
+#1 /mnt/shared/framework/web/helpers/CHtml.php(426): tag()
+#2 /mnt/shared/escort/www/protected/views/girls/edit.php(83): image()
+#3 /mnt/shared/framework/web/CBaseController.php(126): require()
+#4 /mnt/shared/framework/web/CBaseController.php(95): GirlsController->renderInternal()
+#5 /mnt/shared/framework/web/CController.php(869): GirlsController->renderFile()
+#6 /mnt/shared/framework/web/CController.php(782): GirlsController->renderPartial()
+#7 /mnt/shared/escort/www/protected/controllers/girls/EditAction.php(41): GirlsController->render()
+#8 /mnt/shared/framework/web/actions/CAction.php(76): EditAction->run()
+#9 /mnt/shared/framework/web/CController.php(308): EditAction->runWithParams()
+#10 /mnt/shared/framework/web/filters/CFilterChain.php(133): GirlsController->runAction()
+#11 /mnt/shared/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /mnt/shared/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /mnt/shared/framework/web/filters/CInlineFilter.php(58): GirlsController->filterAccessControl()
+#14 /mnt/shared/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /mnt/shared/framework/web/CController.php(291): CFilterChain->run()
+#16 /mnt/shared/framework/web/CController.php(265): GirlsController->runActionWithFilters()
+#17 /mnt/shared/framework/web/CWebApplication.php(282): GirlsController->run()
+#18 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#20 /mnt/shared/escort/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/girls/edit/id/2
+2013/10/24 13:38:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mnt/shared/lineupIcons/1432_icon5266a757e6d953.24227848.jpg".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('mnt/shared/line...')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mnt/shared/lineupIcons/1432_icon5266a757e6d953.24227848.jpg
+HTTP_REFERER=http://escort/girls/edit/id/2
+---
+2013/10/24 13:38:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mnt/shared/lineupIcons/1580_icon5266a757a7fe83.22449678.jpg".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('mnt/shared/line...')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mnt/shared/lineupIcons/1580_icon5266a757a7fe83.22449678.jpg
+HTTP_REFERER=http://escort/girls/edit/id/2
+---
+2013/10/24 13:38:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mnt/shared/lineupIcons/1491_icon5266a757dea7a2.52418570.jpg".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('mnt/shared/line...')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mnt/shared/lineupIcons/1491_icon5266a757dea7a2.52418570.jpg
+HTTP_REFERER=http://escort/girls/edit/id/2
+---
+2013/10/24 13:38:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mnt/shared/lineupIcons/1491_icon5266a757dea7a2.52418570.jpg".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('mnt/shared/line...')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mnt/shared/lineupIcons/1491_icon5266a757dea7a2.52418570.jpg
+HTTP_REFERER=http://escort/girls/edit/id/2
+---
+2013/10/24 13:38:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mnt/shared/lineupIcons/1580_icon5266a757a7fe83.22449678.jpg".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('mnt/shared/line...')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mnt/shared/lineupIcons/1580_icon5266a757a7fe83.22449678.jpg
+HTTP_REFERER=http://escort/girls/edit/id/2
+---
+2013/10/24 13:38:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mnt/shared/lineupIcons/1432_icon5266a757e6d953.24227848.jpg".' in /mnt/shared/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /mnt/shared/framework/web/CWebApplication.php(141): CWebApplication->runController('mnt/shared/line...')
+#1 /mnt/shared/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /mnt/shared/escort/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mnt/shared/lineupIcons/1432_icon5266a757e6d953.24227848.jpg
+HTTP_REFERER=http://escort/girls/edit/id/2
+---

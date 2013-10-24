@@ -75,6 +75,21 @@ $this->breadcrumbs=array(
 		</div>
 
 		<div class="row">
+			<?php
+			echo '<pre>';
+			print_r($images);
+			echo '</pre>';
+//			if($images)
+//			{
+//				foreach($images as $image)
+//				{
+//					echo CHtml::image(Yii::app()->params['iconsFolder'] . $image);
+//				}
+//			}
+//			?>
+		</div>
+
+		<div class="row">
 			<?php echo $form->labelEx($girl,'g_description'); ?>
 			<?php echo $form->textArea($girl,'g_description',array('rows'=>6, 'cols'=>50)); ?>
 			<?php echo $form->error($girl,'g_description'); ?>
@@ -98,16 +113,11 @@ $this->breadcrumbs=array(
 			<?php echo $form->error($girl,'g_city'); ?>
 		</div>
 
-
 		<div class="row buttons">
-			<?php echo CHtml::submitButton('Save'); ?>
+			<?php echo CHtml::ajaxSubmitButton('Save', '',
+			array('type'=>'POST',
+					'update'=>'#contact-form')); ?>
 		</div>
-
-<!--		<div class="row buttons">-->
-<!--			--><?php //echo CHtml::ajaxSubmitButton('Save', '',
-//			array('type'=>'POST',
-//					'update'=>'#contact-form')); ?>
-<!--		</div>-->
 
 		<?php $this->endWidget(); ?>
 

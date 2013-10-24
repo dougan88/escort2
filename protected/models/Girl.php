@@ -18,6 +18,7 @@ class Girl extends CActiveRecord
                 array('g_city', 'in', 'range' => array_keys(Yii::app()->params['cities'])),
                 array('g_cell_phone', 'safe'),
                 array('g_photo', 'file', 'types' => 'jpg, png', 'maxSize' => Yii::app()->params['maxUploadFileSize'], 'allowEmpty' => true, 'maxFiles' => Yii::app()->params['maxFilesUpload']),
+				array('g_age, g_height, g_weight, g_cell_phone', 'type', 'type' => 'integer'),
         );
     }
 

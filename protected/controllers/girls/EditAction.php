@@ -21,7 +21,6 @@ class EditAction extends EscAction
 				}
 			}
 		}
-
 		if(!$girl)
 		{
 			Yii::app()->user->setFlash('cantFind','Cant find specified girl.');
@@ -32,29 +31,27 @@ class EditAction extends EscAction
 			{
 				$this->performAjaxValidation($girl);
 			}
-			$girl->attributes = $_POST['Girl'];
-			$girl->g_photo = CUploadedFile::getInstances($girl,'g_photo');
-			if($girl->save())
-			{
-				if ($girl->g_photo)
-				{
-					$message = $this->saveImage($girl->g_photo, $girl->g_id, Yii::app()->params['photoG']);
-
-					if($message !== true)
-					{
-						$girl->addError('g_photo', $message);
-					}
-				}
-			}
+			$this->_saveGirl($girl);
 		}
 		elseif (isset($_GET['sent']))
 		{
 			Yii::app()->user->setFlash('cantFind','Something went wrong. Probably the images that you downloaded was too big. Please, try again.');
 		}
-		$this->controller->render('edit', array('girl' => $girl));
+		$images = $this->_getImages($girl->g_id);
+		$this->controller->render('edit', array('girl' => $girl, 'images' => $images));
 	}
 
+
 	public function performAjaxValidation($girl)
+	{
+		$this->_saveGirl($girl);
+		$images = $this->_getImages($girl->g_id);
+		echo $this->controller->renderPartial('edit', array('girl' => $girl, 'images' => $images), true);
+		Yii::app()->end();
+	}
+
+
+	private function _saveGirl($girl)
 	{
 		$girl->attributes = $_POST['Girl'];
 		$girl->g_photo = CUploadedFile::getInstances($girl,'g_photo');
@@ -70,8 +67,25 @@ class EditAction extends EscAction
 				}
 			}
 		}
-		echo $this->controller->renderPartial('edit', array('girl' => $girl), true);
-		Yii::app()->end();
+	}
+
+	private function _getImages($girlId)
+	{
+		$images = PhotoGirl::model()->findAllByAttributes(array('pg_girl'=>$girlId));
+		if(count($images))
+		{
+			foreach($images as &$image)
+			{
+				$image = $image->getAttributes(array('pg_icon'));
+				$image = $image['pg_icon'];
+			}
+			return $images;
+		}
+		else
+		{
+			return false;
+		}
+
 	}
 
 }

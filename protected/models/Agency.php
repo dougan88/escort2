@@ -16,6 +16,7 @@ class Agency extends CActiveRecord
                 array('a_city', 'in', 'range' => array_keys(Yii::app()->params['cities'])),
                 array('a_cell_phone', 'safe'),
                 array('a_name, a_email, a_skype, a_cell_phone', 'unique'),
+				array('a_cell_phone', 'type', 'type' => 'integer'),
         );
     }
 
