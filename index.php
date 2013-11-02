@@ -2,7 +2,17 @@
 
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../../framework/yii.php';
-$config=dirname(__FILE__).'/protected/config/main.php';
+
+$environmentOs = isset($_SERVER['ENVIRONMENT_OS']) ? $_SERVER['ENVIRONMENT_OS'] : false;
+
+if($environmentOs == 'win')
+{
+	$config=dirname(__FILE__).'/protected/config/main-win.php';
+}
+else
+{
+	$config=dirname(__FILE__).'/protected/config/main.php';
+}
 
 // remove the following lines when in production mode
 defined('YII_DEBUG') or define('YII_DEBUG',false);

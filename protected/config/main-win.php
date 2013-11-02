@@ -1,0 +1,1 @@
+<?phpreturn CMap::mergeArray(	require(dirname(__FILE__).'/main.php'),	array(		'params' => array(			'imageFolder' => 'C:/sites/winLineupImages',			'iconsFolder' => 'C:/sites/winLineupIcons',		),	));
