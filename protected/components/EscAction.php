@@ -59,4 +59,14 @@ class EscAction extends CAction
 		return $photo;
 	}
 
+	public  function getAssets()
+	{
+		Yii::app()->clientScript->registerScriptFile(
+			Yii::app()->assetManager->publish(
+				Yii::app()->theme->basePath . '/js/alert.js'
+			),
+			CClientScript::POS_END
+		);
+	}
+
 }

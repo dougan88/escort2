@@ -7,6 +7,8 @@ class EditAction extends EscAction
 	 */
 	public function run()
 	{
+		$this->getAssets();
+
 		$girl = false;
 
 		if(isset($_GET['id']))
