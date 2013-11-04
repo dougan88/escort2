@@ -27,7 +27,7 @@ class EditAction extends EscAction
 			{
 				Yii::app()->user->setFlash('cantFind','Cant find specified girl.');
 			}
-			else
+			elseif ($girl instanceof Girl)
 			{
 				$images = $this->_getImages($girl->g_id);
 			}
