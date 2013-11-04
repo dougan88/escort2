@@ -61,9 +61,15 @@ class EscAction extends CAction
 
 	public  function getAssets()
 	{
+		Yii::app()->clientScript->registerCssFile(
+			Yii::app()->assetManager->publish(
+				Yii::app()->theme->basePath . '/css/image_frame.css'
+			)
+		);
+
 		Yii::app()->clientScript->registerScriptFile(
 			Yii::app()->assetManager->publish(
-				Yii::app()->theme->basePath . '/js/alert.js'
+				Yii::app()->theme->basePath . '/js/'
 			),
 			CClientScript::POS_END
 		);
