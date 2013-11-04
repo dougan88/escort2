@@ -8,7 +8,8 @@ class EditAction extends EscAction
 	public function run()
 	{
 		$this->getAssets();
-		$girl = false;
+		$girl   = false;
+		$images = false;
 
 		if(isset($_GET['id']))
 		{
@@ -21,12 +22,18 @@ class EditAction extends EscAction
 					$girl = $grl;
 				}
 			}
+
+			if(!$girl)
+			{
+				Yii::app()->user->setFlash('cantFind','Cant find specified girl.');
+			}
+			else
+			{
+				$images = $this->_getImages($girl->g_id);
+			}
 		}
-		if(!$girl)
-		{
-			Yii::app()->user->setFlash('cantFind','Cant find specified girl.');
-		}
-		elseif(isset($_POST['Girl']))
+
+		if(isset($_POST['Girl']))
 		{
 			if(Yii::app()->request->isAjaxRequest)
 			{
@@ -38,7 +45,7 @@ class EditAction extends EscAction
 		{
 			Yii::app()->user->setFlash('cantFind','Something went wrong. Probably the images that you downloaded was too big. Please, try again.');
 		}
-		$images = $this->_getImages($girl->g_id);
+
 		$this->controller->render('edit', array('girl' => $girl, 'images' => $images));
 	}
 
