@@ -40,9 +40,18 @@ class EditAction extends EscAction
 		{
 			if(Yii::app()->request->isAjaxRequest)
 			{
-				$this->performAjaxValidation($girl);
+				$this->saveGirlByAjax($girl);
 			}
 			$this->_saveGirl($girl);
+		}
+
+		if(isset($_POST['Images']))
+		{
+			if(Yii::app()->request->isAjaxRequest)
+			{
+				$this->saveImagesByAjax($girl);
+			}
+			$this->_saveImages($girl);
 		}
 
 		if (!$_POST && isset($_GET['sent']))
@@ -54,7 +63,7 @@ class EditAction extends EscAction
 	}
 
 
-	public function performAjaxValidation($girl)
+	public function saveGirlByAjax($girl)
 	{
 		$this->_saveGirl($girl);
 		$images = $this->_getImages($girl->g_id);
@@ -62,10 +71,25 @@ class EditAction extends EscAction
 		Yii::app()->end();
 	}
 
+	public function saveImagesByAjax($girl)
+	{
+		$this->_saveImages($girl);
+		$images = $this->_getImages($girl->g_id);
+		echo $this->controller->renderPartial('edit', array('girl' => $girl, 'images' => $images), true);
+		Yii::app()->end();
+	}
 
+
+	//Saving all girl properties without images
 	private function _saveGirl($girl)
 	{
 		$girl->attributes = $_POST['Girl'];
+		$girl->save();
+	}
+
+	//Saving all images for specified girl
+	private function _saveImages($girl)
+	{
 		$girl->g_photo = CUploadedFile::getInstances($girl,'g_photo');
 		if($girl->save())
 		{
@@ -81,6 +105,8 @@ class EditAction extends EscAction
 		}
 	}
 
+	//Getting all images related with specified girl id
+	//Returns array of links for all images
 	private function _getImages($girlId)
 	{
 		$images = PhotoGirl::model()->findAllByAttributes(array('pg_girl'=>$girlId));
