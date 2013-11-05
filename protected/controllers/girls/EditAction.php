@@ -45,13 +45,14 @@ class EditAction extends EscAction
 			$this->_saveGirl($girl);
 		}
 
-		if(isset($_POST['Images']))
+		if(isset($_POST['Girl']['g_photo']))
 		{
 			if(Yii::app()->request->isAjaxRequest)
 			{
 				$this->saveImagesByAjax($girl);
 			}
 			$this->_saveImages($girl);
+			$images = $this->_getImages($girl->g_id);
 		}
 
 		if (!$_POST && isset($_GET['sent']))

@@ -69,7 +69,7 @@ class EscAction extends CAction
 
 		Yii::app()->clientScript->registerScriptFile(
 			Yii::app()->assetManager->publish(
-				Yii::app()->theme->basePath . '/js/'
+				Yii::app()->theme->basePath . '/js/ajaxFileUpload.js'
 			),
 			CClientScript::POS_END
 		);
