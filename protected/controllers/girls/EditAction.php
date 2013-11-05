@@ -7,10 +7,13 @@ class EditAction extends EscAction
 	 */
 	public function run()
 	{
+		//Including css and js and initializing models with false
 		$this->getAssets();
 		$girl   = false;
 		$images = false;
 
+		//Initializing $girl and $images models with appropriate values
+		//in case if current user has Girl with specified id
 		if(isset($_GET['id']))
 		{
 			$user = User::model()->with('girls')->findByPk(Yii::app()->user->id);
@@ -41,7 +44,8 @@ class EditAction extends EscAction
 			}
 			$this->_saveGirl($girl);
 		}
-		elseif (isset($_GET['sent']))
+
+		if (!$_POST && isset($_GET['sent']))
 		{
 			Yii::app()->user->setFlash('cantFind','Something went wrong. Probably the images that you downloaded was too big. Please, try again.');
 		}
