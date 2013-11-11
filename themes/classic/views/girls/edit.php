@@ -74,30 +74,6 @@ $this->breadcrumbs=array(
 			<?php echo $form->error($girl,'g_cell_phone'); ?>
 		</div>
 
-		<div class="row" id="main">
-			<h1>Photos</h1>
-			<?php
-//			echo '<pre>';
-//			print_r($images);
-//			echo '</pre>';
-			?>
-			<?php echo $form->labelEx($girl, 'g_photo'); ?>
-			<?php echo $form->fileField($girl, 'g_photo', array('multiple' => 'multiple', 'name' => 'Girl[g_photo][]')); ?>
-			<?php echo $form->error($girl, 'g_photo'); ?>
-			<div id="response"></div>
-			<ul id="image-list">
-			<?php
-				if($images)
-				{
-					foreach($images as $image)
-					{
-						echo CHtml::image(Yii::app()->params['iconsFolder'] . $image);
-					}
-				}
-			?>
-			</ul>
-		</div>
-
 		<div class="row">
 			<?php echo $form->labelEx($girl,'g_description'); ?>
 			<?php echo $form->textArea($girl,'g_description',array('rows'=>6, 'cols'=>50)); ?>
@@ -125,5 +101,7 @@ $this->breadcrumbs=array(
 		<?php $this->endWidget(); ?>
 
 	</div><!-- form -->
+
+	<?php $this->renderPartial('forms/imageForm', array('girl' => $girl, 'images' => $images));?>
 
 <?php endif; ?>
