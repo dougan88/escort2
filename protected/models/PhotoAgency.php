@@ -3,17 +3,17 @@
 class PhotoAgency extends CActiveRecord
 {
 
-    public static function model($className = __CLASS__)
-    {
-        return parent::model($className);
-    }
+	public static function model($className = __CLASS__)
+	{
+		return parent::model($className);
+	}
 
-    public function rules()
-    {
-        return array(
-                array('pa_agency, pa_link, pa_icon', 'required'),
-        );
-    }
+	public function rules()
+	{
+		return array(
+				array('pa_agency, pa_link, pa_icon', 'required'),
+		);
+	}
 
 	public function afterValidate()
 	{
@@ -23,10 +23,10 @@ class PhotoAgency extends CActiveRecord
 		}
 	}
 
-    public function tableName()
-    {
-        return 'photo_g';
-    }
+	public function tableName()
+	{
+		return 'photo_g';
+	}
 
 	public function attributeLabels()
 	{

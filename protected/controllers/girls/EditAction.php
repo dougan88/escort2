@@ -45,7 +45,7 @@ class EditAction extends EscAction
 			$this->_saveGirl($girl);
 		}
 
-		if(isset($_POST['Girl']['g_photo']))
+		if(isset($_FILES['Girl']))
 		{
 			if(Yii::app()->request->isAjaxRequest)
 			{
@@ -76,7 +76,7 @@ class EditAction extends EscAction
 	{
 		$this->_saveImages($girl);
 		$images = $this->_getImages($girl->g_id);
-		echo $this->controller->renderPartial('edit', array('girl' => $girl, 'images' => $images), true);
+		echo $this->controller->renderPartial('forms/imageForm', array('girl' => $girl, 'images' => $images), true);
 		Yii::app()->end();
 	}
 
@@ -104,27 +104,6 @@ class EditAction extends EscAction
 				}
 			}
 		}
-	}
-
-	//Getting all images related with specified girl id
-	//Returns array of links for all images
-	private function _getImages($girlId)
-	{
-		$images = PhotoGirl::model()->findAllByAttributes(array('pg_girl'=>$girlId));
-		if(count($images))
-		{
-			foreach($images as &$image)
-			{
-				$image = $image->getAttributes(array('pg_icon'));
-				$image = $image['pg_icon'];
-			}
-			return $images;
-		}
-		else
-		{
-			return false;
-		}
-
 	}
 
 }
