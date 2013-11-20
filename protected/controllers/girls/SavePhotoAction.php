@@ -1,6 +1,6 @@
 <?php
 
-class EditAction extends EscAction
+class SavePhotoAction extends EscAction
 {
 	/**
 	 * Declares class-based actions.
@@ -9,13 +9,17 @@ class EditAction extends EscAction
 	{
 		//Including css and js and initializing models with false
 		$this->getAssets();
-		$girl   = false;
 		$images = false;
 
 		//Initializing $girl and $images models with appropriate values
 		//in case if current user has Girl with specified id
-		if(isset($_GET['id']))
+		if(isset($_GET['id']) && isset($_GET['type']))
 		{
+
+			$photos = new Photo();
+
+
+
 			$user = User::model()->with('girls')->findByPk(Yii::app()->user->id);
 			$girls = $user->girls;
 			foreach($girls as $grl)
@@ -104,27 +108,6 @@ class EditAction extends EscAction
 				}
 			}
 		}
-	}
-
-	//Getting all images related with specified girl id
-	//Returns array of links for all images
-	private function _getImages($girlId)
-	{
-		$images = PhotoGirl::model()->findAllByAttributes(array('pg_girl'=>$girlId));
-		if(count($images))
-		{
-			foreach($images as &$image)
-			{
-				$image = $image->getAttributes(array('pg_icon'));
-				$image = $image['pg_icon'];
-			}
-			return $images;
-		}
-		else
-		{
-			return false;
-		}
-
 	}
 
 }

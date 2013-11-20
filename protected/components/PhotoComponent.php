@@ -20,6 +20,9 @@ class PhotoComponent extends CApplicationComponent
 	 */
 	public $iconsFolder;
 
+	const PHOTO_GIRL   = 'photo_girl';
+	const PHOTO_AGENCY = 'photo_agency';
+
 	/**
 	 * Creates new Photo model according to specified type
 	 * and initializes it with specified values.
@@ -96,24 +99,49 @@ class PhotoComponent extends CApplicationComponent
 		return true;
 	}
 
-	//Getting all images related with specified girl id
-	//Returns array of links for all images
-	public function getIcons($girlId)
+	/**
+	 * Getting all icons related with specified girl id.
+	 * Returns array of links for all icons.
+	 *
+	 * @param int $modelId Model ID.
+	 * @param string $modelType The name of required model: PhotoGirl or PhotoAgency.
+	 *
+	 * @return array | boolean
+	 */
+	public function getIcons($modelId, $modelType)
 	{
-		$images = PhotoGirl::model()->findAllByAttributes(array('pg_girl'=>$girlId));
-		if(count($images))
-		{
-			foreach($images as &$image)
-			{
-				$image = $image->getAttributes(array('pg_icon'));
-				$image = $image['pg_icon'];
-			}
-			return $images;
-		}
-		else
-		{
-			return false;
+		switch ($modelType) {
+			case self::PHOTO_GIRL:
+				$icons = PhotoGirl::getIcons($modelId);
+				break;
+			case self::PHOTO_AGENCY:
+				$icons = PhotoAgency::getIcons($modelId);
+				break;
 		}
 
+		return $icons;
+	}
+
+	/**
+	 * Getting all images related with specified girl id.
+	 * Returns array of links for all icons.
+	 *
+	 * @param int $modelId Model ID.
+	 * @param string $modelType The name of required model: PhotoGirl or PhotoAgency.
+	 *
+	 * @return array | boolean
+	 */
+	public function getImages($modelId, $modelType)
+	{
+		switch ($modelType) {
+			case self::PHOTO_GIRL:
+				$images = PhotoGirl::getImages($modelId);
+				break;
+			case self::PHOTO_AGENCY:
+				$images = PhotoAgency::getImages($modelId);
+				break;
+		}
+
+		return $images;
 	}
 }

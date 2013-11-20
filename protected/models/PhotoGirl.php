@@ -33,4 +33,41 @@ class PhotoGirl extends CActiveRecord
 		return array(
 		);
 	}
+
+	public static function getIcons($girlId)
+	{
+		$icons = self::model()->findAllByAttributes(array('pg_girl'=>$girlId));
+		if(count($icons))
+		{
+			foreach($icons as &$icon)
+			{
+				$icon = $icon->getAttributes(array('pg_icon'));
+				$icon = $icon['pg_icon'];
+			}
+			return $icons;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	public static function getImages($girlId)
+	{
+		$images = self::model()->findAllByAttributes(array('pg_girl'=>$girlId));
+		if(count($images))
+		{
+			foreach($images as &$image)
+			{
+				$image = $image->getAttributes(array('pg_icon'));
+				$image = $image['pg_icon'];
+			}
+			return $images;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 }

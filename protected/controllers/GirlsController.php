@@ -11,6 +11,7 @@ class GirlsController extends Controller
 			'create' => 'application.controllers.girls.CreateAction',
 			'edit-list' => 'application.controllers.girls.EditListAction',
 			'edit' => 'application.controllers.girls.EditAction',
+			'savePhoto' => 'application.controllers.girls.SavePhotoAction',
 			'list' => 'application.controllers.girls.ListAction',
 			'show' => 'application.controllers.girls.ShowAction',
 			'delete' => 'application.controllers.girls.DeleteGirlAction',
