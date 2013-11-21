@@ -20,8 +20,8 @@ class PhotoComponent extends CApplicationComponent
 	 */
 	public $iconsFolder;
 
-	const PHOTO_GIRL   = 'photo_girl';
-	const PHOTO_AGENCY = 'photo_agency';
+	const PHOTO_GIRL   = 'girl';
+	const PHOTO_AGENCY = 'agency';
 
 	/**
 	 * Creates new Photo model according to specified type
@@ -39,10 +39,10 @@ class PhotoComponent extends CApplicationComponent
 	private function _createPhotoModel($ownerId, $imageName, $iconName, $modelType)
 	{
 		switch ($modelType) {
-			case Yii::app()->params['photoG']:
+			case self::PHOTO_GIRL:
 				$photo = new PhotoGirl();
 				break;
-			case Yii::app()->params['photoA']:
+			case self::PHOTO_AGENCY:
 				$photo = new PhotoAgency();
 				break;
 		}

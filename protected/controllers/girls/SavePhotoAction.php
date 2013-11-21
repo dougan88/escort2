@@ -17,10 +17,13 @@ class SavePhotoAction extends EscAction
 
 		if(isset($_GET['id']) && isset($_GET['type']))
 		{
-			$images = Yii::app()->photo->getImages($_GET['id'], PhotoComponent::PHOTO_GIRL);
 			if (isset($_FILES['Photo'])) {
-
+				$photo->attributes = $_FILES['Photo'];
+				$photo->photo = CUploadedFile::getInstances($photo,'photo');
+				Yii::app()->photo->saveImage($photo->photo, $_GET['id'], $_GET['type']);
 			}
+
+			$images = Yii::app()->photo->getImages($_GET['id'], PhotoComponent::PHOTO_GIRL);
 		}
 
 		if (!$_POST && !$_FILES && isset($_GET['sent']))
