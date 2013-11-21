@@ -8,7 +8,7 @@
 		</div>
 
 	<?php else: ?>
-		<?php $this->renderPartial('forms/imageForm', array('photo' => $photo, 'images' => $images));?>
+		<?php $this->renderPartial('forms/photoForm', array('photo' => $photo, 'images' => $images));?>
 	<?php endif; ?>
 
 	<div id="response"></div>
