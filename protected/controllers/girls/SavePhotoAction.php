@@ -7,6 +7,7 @@ class SavePhotoAction extends EscAction
 	 */
 	public function run()
 	{
+		$this->getAssets();
 		$images = false;
 
 		$photo = new Photo();
@@ -21,6 +22,11 @@ class SavePhotoAction extends EscAction
 				$photo->attributes = $_FILES['Photo'];
 				$photo->photo = CUploadedFile::getInstances($photo,'photo');
 				Yii::app()->photo->saveImage($photo->photo, $_GET['id'], $_GET['type']);
+
+				if (Yii::app()->request->isAjaxRequest) {
+					echo $this->controller->renderPartial('forms/photoForm', array('photo' => $photo, 'images' => $images));
+					Yii::app()->end();
+				}
 			}
 
 			$images = Yii::app()->photo->getImages($_GET['id'], PhotoComponent::PHOTO_GIRL);
@@ -39,8 +45,7 @@ class SavePhotoAction extends EscAction
 //	{
 //		$this->_saveGirl($girl);
 //		$images = $this->_getImages($girl->g_id);
-//		echo $this->controller->renderPartial('edit', array('girl' => $girl, 'images' => $images), true);
-//		Yii::app()->end();
+
 //	}
 //
 //	public function saveImagesByAjax($girl)
