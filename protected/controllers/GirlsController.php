@@ -15,6 +15,7 @@ class GirlsController extends Controller
 			'list' => 'application.controllers.girls.ListAction',
 			'show' => 'application.controllers.girls.ShowAction',
 			'delete' => 'application.controllers.girls.DeleteGirlAction',
+			'deletePhoto' => 'application.controllers.girls.DeletePhotoAction',
 		);
 	}
 

@@ -1,13 +1,15 @@
 <?php
 
-class SavePhotoAction extends EscAction
+class DeletePhotoAction extends EscAction
 {
 	/**
 	 * Declares class-based actions.
 	 */
 	public function run()
 	{
-		$this->getAssets();
+		if(!Yii::app()->request->isAjaxRequest) {
+			throw new CHttpException(404,'The specified page cannot be found.');
+		}
 		$images = false;
 
 		$photo = new Photo();
